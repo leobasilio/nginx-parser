@@ -68,7 +68,7 @@ Parser.prototype.read = function (path, options, iterator, callback) {
  */
 
 Parser.prototype.tail = function (path, iterator, callback) {
-    var stream = spawn('tail', [ '-F', '-c', '+0', path]).stdout;
+    var stream = spawn('tail', [ '-F', '-c', '0', path]).stdout;
     return this.stream(stream, iterator, callback);
 };
 
